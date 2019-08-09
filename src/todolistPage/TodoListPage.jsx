@@ -2,27 +2,29 @@
 
 import React from 'react';
 import TodoInput from './TodoInput';
+import TodoList from './TodoList';
+import TodoListTitle from './TodoListTitle';
 
 const styles = {
   wrapper: {
     width: 500,
     height: 600,
-    border: 'solid 1px #000',
+    border: 'solid 3px #777',
     borderRadius: 10,
-  },
-  title: {
-    fontSize: 20,
-    padding: 20,
   },
 };
 
 function TodoListPage() {
+  
+  const todos = ['完成TodoList', '用Class做一次', 'push到Github'];
+
   return (
     <div style={styles.wrapper}>
-      <h1 style={styles.title}>
-        TodoList
-      </h1>
+      <TodoListTitle
+       todos={todos} />
       <TodoInput />
+      <TodoList
+       todos={todos} />
     </div>
   );
 }
