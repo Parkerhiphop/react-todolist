@@ -1,13 +1,20 @@
 import React from 'react';
-import './App.css';
 import TodoListPage from './todolistPage/TodoListPage';
+
+const styles = {
+  wrapper: {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <TodoListPage />
-      </header>
+    <div style={styles.wrapper}>
+      <TodoListPage />
     </div>
   );
 }
